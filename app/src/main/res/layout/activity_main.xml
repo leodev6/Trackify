@@ -1,0 +1,147 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background">
+
+    <!-- Titre de l'application -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Suivi des heures de travail"
+        android:textSize="24sp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Bouton pour pointer l'entrée -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnClockIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pointer l'entrée"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/colorPrimary"
+        app:cornerRadius="8dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Affichage de l'heure d'entrée -->
+    <TextView
+        android:id="@+id/tvClockInTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heure d'entrée : --:--:--"
+        android:textSize="16sp"
+        android:textColor="@color/textColorPrimary"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Bouton pour pointer la sortie -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnClockOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pointer la sortie"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/colorPrimary"
+        app:cornerRadius="8dp"
+        android:enabled="false"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Affichage de l'heure de sortie -->
+    <TextView
+        android:id="@+id/tvClockOutTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heure de sortie : --:--:--"
+        android:textSize="16sp"
+        android:textColor="@color/textColorPrimary"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Bouton pour démarrer la pause -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStartPause"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Démarrer la pause"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/colorPrimary"
+        app:cornerRadius="8dp"
+        android:enabled="false"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Affichage de l'heure de début de pause -->
+    <TextView
+        android:id="@+id/tvPauseStartTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Début de pause : --:--:--"
+        android:textSize="16sp"
+        android:textColor="@color/textColorPrimary"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Bouton pour arrêter la pause -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEndPause"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Arrêter la pause"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/colorPrimary"
+        app:cornerRadius="8dp"
+        android:enabled="false"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Affichage de l'heure de fin de pause -->
+    <TextView
+        android:id="@+id/tvPauseEndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fin de pause : --:--:--"
+        android:textSize="16sp"
+        android:textColor="@color/textColorPrimary"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Statut actuel -->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Statut : Non pointé"
+        android:textSize="18sp"
+        android:textColor="@color/textColorPrimary"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Résumé des heures travaillées -->
+    <TextView
+        android:id="@+id/tvSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Résumé :"
+        android:textSize="18sp"
+        android:textColor="@color/textColorPrimary"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Bouton pour voir l'historique -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnViewHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Voir l'historique"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/colorPrimary"
+        app:cornerRadius="8dp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tvHoursWorked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heures travaillées : 0h"
+        android:textSize="18sp"
+        android:textColor="@color/textColorPrimary"
+        android:layout_marginBottom="16dp" />
+
+</LinearLayout>
