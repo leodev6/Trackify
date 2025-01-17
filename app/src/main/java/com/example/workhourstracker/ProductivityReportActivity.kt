@@ -18,7 +18,7 @@ class ProductivityReportActivity : AppCompatActivity() {
             WorkDay(2, 1, Date(), Date(), Date())
         )
 
-        // Calcule la productivité (exemple simple)
+        // Calcule la productivité (exemple simple)ok
         val totalHours = workDays.sumOf { it.endTime?.time?.minus(it.startTime.time) ?: 0 }
         val tvReport = findViewById<TextView>(R.id.tvReport)
         tvReport.text = "Total des heures travaillées : ${totalHours / 3600000} heures"
