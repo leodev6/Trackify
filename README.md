@@ -147,3 +147,74 @@
 1. Clonez ce dépôt dans votre machine locale :
    ```markdown
    git clone https://github.com/votre-repo/trackify.git
+
+
+## Installation et Configuration (suite)
+
+2. Lancez l'application sur un émulateur ou un appareil physique :
+   - Assurez-vous qu'un émulateur Android est configuré dans **Android Studio** ou qu'un appareil est connecté en mode développeur avec le débogage USB activé.
+   - Cliquez sur le bouton **Run** (icône ▶️) dans Android Studio.
+   - Alternativement, utilisez la ligne de commande suivante pour construire et exécuter l'application :
+     ```bash
+     ./gradlew installDebug
+     ```
+
+---
+
+## Utilisation de l'Application
+
+1. **Démarrage** :
+   - Ouvrez l'application sur votre appareil ou émulateur.
+   - Créez un compte utilisateur ou connectez-vous si l'application intègre un système de gestion des utilisateurs.
+
+2. **Pointage des Heures** :
+   - **Entrée** : Appuyez sur le bouton "Entrée" pour enregistrer votre heure d'arrivée.
+   - **Pause** : Appuyez sur le bouton "Pause" pour débuter ou terminer une pause.
+   - **Sortie** : Appuyez sur le bouton "Sortie" pour enregistrer votre heure de départ.
+
+3. **Visualisation des Données** :
+   - Suivez vos statuts en temps réel : **Entré**, **En Pause**, ou **Sorti**.
+   - Consultez le total des heures travaillées et vérifiez si une pause a été effectuée.
+   - Accédez à l'historique des journées de travail via le menu dédié.
+
+4. **Demandes de Congé** :
+   - Accédez à l'activité de gestion des congés via le bouton ou menu correspondant.
+   - Soumettez une demande de congé en précisant le motif et les dates.
+   - Suivez l'état des demandes (en attente, approuvées, ou refusées).
+
+5. **Rapports de Productivité** :
+   - Consultez les rapports journaliers ou mensuels pour visualiser vos performances.
+   - Analysez les statistiques sur vos heures travaillées, pauses, et jours de congé.
+
+---
+
+## Développement et Structure du Projet
+
+1. **Activités Principales** :
+   - `MainActivity.kt` : Pointage des heures et affichage des statuts en temps réel.
+   - `LeaveRequestActivity.kt` : Gestion des demandes de congé.
+   - `ProductivityReportActivity.kt` : Visualisation des rapports de productivité.
+
+2. **Modèles de Données** :
+   - `WorkDay.kt` : Gère les informations sur une journée de travail (heures d'entrée, sortie, pauses, etc.).
+   - `User.kt` : Stocke les données utilisateur (nom, identifiant, etc.).
+   - `Leave.kt` et `LeaveRequest.kt` : Gestion des données relatives aux congés.
+
+3. **Interfaces Utilisateur (UI)** :
+   - `item_work_day.xml` : Définit l'apparence d'une journée de travail dans la liste.
+   - `activity_leave_request.xml` : Interface pour les demandes de congé.
+
+4. **Adaptateurs** :
+   - `WorkHoursAdapter.kt` : Gère l'affichage des éléments dans le `RecyclerView` pour les journées de travail.
+
+---
+
+## Contributions
+
+Les contributions sont les bienvenues ! Si vous souhaitez ajouter une fonctionnalité ou signaler un problème :
+1. Forkez le dépôt.
+2.Branche pour vos modifications :
+   ```bash
+   git checkout -b feature/ma-nouvelle-fonctionnalite
+
+   
